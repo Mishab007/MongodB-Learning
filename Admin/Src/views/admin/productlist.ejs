@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Public/styles/list.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Product List</h2>
+        <ul class="product-list">
+          <% products.forEach(product=>{%>
+          <li class="product-item">
+            <img class="product-image" src="/public/<%=product.imagePath%>" alt="Product Image">
+            <h3 class="product-title"><%=product. productName%></h3>
+            <p class="product-description"><%=product.productDescription%></p>
+            <p class="product-price"><%=product. productPrice%></p>
+          <a href="/admin/editProduct/<%=product._id%>">  <button class="button">Edit</button></a>
+        <a href="/admin/deleteProduct/<%=product._id%>"><button class="button">delete</button></a>
+          </li>
+        <% }) %>
+          
+        </ul>
+        
+      </div>
+</body>
+</html>
